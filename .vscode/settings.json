@@ -1,0 +1,6 @@
+{
+
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true // 自动修复 all
+      },
+}
