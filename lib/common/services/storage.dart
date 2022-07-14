@@ -39,4 +39,5 @@ class StorageService extends GetxService {
   Future<bool> remove(String key) async {
     return await _prefs.remove(key);
   }
+  
 }

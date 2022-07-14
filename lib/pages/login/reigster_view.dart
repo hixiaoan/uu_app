@@ -37,13 +37,13 @@ class _ReigsterPageState extends State<ReigsterPage> {
       ),
       body: ListView(
         children: [
-          LoginAnimationWidget(isOpen: openEyes,),
+          // LoginAnimationWidget(isOpen: openEyes,),
           LoginTextFiled(
               titile: "用户名",
               hint: "请输入用户名",
               onChange: (value){
                 userName = value;
-              }),
+                 }),
           LoginTextFiled(
             titile: "密码",
             hint: "请输入密码",

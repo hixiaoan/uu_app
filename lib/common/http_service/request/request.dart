@@ -41,9 +41,8 @@ abstract class BaseRequest {
     }
 
     if (needLogin()) {
-      // if (UUCache.instance.containsKey("boarding-pass")){
-      //   addHeaderParams("boarding-pass", UUCache.instance.get<String>("boarding-pass") ?? "");
-      // }
+      
+      addHeaderParams("boarding-pass", StorageService.to.readString(StorageKey.boardingPass));
       print(header);
     }
     print("请求url:${uri.toString()}");

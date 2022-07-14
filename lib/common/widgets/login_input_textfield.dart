@@ -49,8 +49,8 @@ class _LoginTextFiledState extends State<LoginTextFiled> {
         Row(
           children: [
             Container(
-              padding: const EdgeInsets.only(left: 15),
-              width: 100,
+              padding: EdgeInsets.only(left: 15.w),
+              width: 100.w,
               child: Text(
                 widget.titile,
                 style: const TextStyle(fontSize: 16),

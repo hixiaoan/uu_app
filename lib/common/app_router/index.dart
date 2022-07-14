@@ -2,7 +2,9 @@ library router;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:get/route_manager.dart';
+import 'package:uu_app/common/bindings/index.dart';
 
 import '../../pages/banner_detail/index.dart';
 import '../../pages/favorite/index.dart';

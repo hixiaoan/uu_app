@@ -18,6 +18,7 @@ import 'package:lottie/lottie.dart';
 import 'package:orientation/orientation.dart';
 import 'package:underline_indicator/underline_indicator.dart';
 import 'package:uu_app/common/app_router/index.dart';
+import 'package:uu_app/common/controller/index.dart';
 import 'package:video_player/video_player.dart';
 import '../models/index.dart';
 import '../util/index.dart';

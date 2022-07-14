@@ -40,7 +40,7 @@ class _LaunchPageState extends State<LaunchPage> {
                   url: 'assets/images/logo.png',
                   fit: BoxFit.contain,
                 ),
-                title: Text('Find Job'),
+                title: Text('welcome to uu'),
               ),
             ),
           ),

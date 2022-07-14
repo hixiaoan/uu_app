@@ -192,49 +192,49 @@ abstract class AppTheme {
           overlayColor: MaterialStateProperty.all(Colors.transparent),
         ),
       ),
-      inputDecorationTheme: InputDecorationTheme(
-        isCollapsed: true,
-        isDense: true,
-        filled: true,
-        fillColor: scheme.surface,
-        labelStyle: TextStyle(
-          fontSize: 16.w,
-          color: scheme.onBackground,
-          fontWeight: FontWeight.w600,
-        ),
-        helperStyle: TextStyle(
-          fontSize: 14.w,
-          color: scheme.onBackground.withOpacity(0.7),
-        ),
-        contentPadding: EdgeInsets.symmetric(
-          horizontal: 20.w,
-          vertical: 14.w,
-        ),
-        border: OutlineInputBorder(
-          borderSide: BorderSide(color: scheme.outline, width: 2.w),
-          borderRadius: BorderRadius.all(Radius.circular(25.w)),
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: scheme.outline, width: 2.w),
-          borderRadius: BorderRadius.all(Radius.circular(25.w)),
-        ),
-        disabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: scheme.outline, width: 2.w),
-          borderRadius: BorderRadius.all(Radius.circular(25.w)),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: scheme.primary, width: 2.w),
-          borderRadius: BorderRadius.all(Radius.circular(25.w)),
-        ),
-        errorBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: error, width: 2.w),
-          borderRadius: BorderRadius.all(Radius.circular(25.w)),
-        ),
-        focusedErrorBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: error, width: 2.w),
-          borderRadius: BorderRadius.all(Radius.circular(100.w)),
-        ),
-      ),
+      // inputDecorationTheme: InputDecorationTheme(
+      //   isCollapsed: false,
+      //   isDense: false,
+      //   filled: false,
+      //   fillColor: scheme.surface,
+      //   labelStyle: TextStyle(
+      //     fontSize: 16.w,
+      //     color: scheme.onBackground,
+      //     fontWeight: FontWeight.w600,
+      //   ),
+      //   helperStyle: TextStyle(
+      //     fontSize: 20.w,
+      //     color: scheme.onBackground.withOpacity(0.7),
+      //   ),
+      //   contentPadding: EdgeInsets.symmetric(
+      //     horizontal: 20.w,
+      //     vertical: 14.w,
+      //   ),
+      //   border: OutlineInputBorder(
+      //     borderSide: BorderSide(color: scheme.outline, width: 2.w),
+      //     borderRadius: BorderRadius.all(Radius.circular(25.w)),
+      //   ),
+      //   enabledBorder: OutlineInputBorder(
+      //     borderSide: BorderSide(color: scheme.outline, width: 2.w),
+      //     borderRadius: BorderRadius.all(Radius.circular(25.w)),
+      //   ),
+      //   disabledBorder: OutlineInputBorder(
+      //     borderSide: BorderSide(color: scheme.outline, width: 2.w),
+      //     borderRadius: BorderRadius.all(Radius.circular(25.w)),
+      //   ),
+      //   focusedBorder: OutlineInputBorder(
+      //     borderSide: BorderSide(color: scheme.primary, width: 2.w),
+      //     borderRadius: BorderRadius.all(Radius.circular(25.w)),
+      //   ),
+      //   errorBorder: OutlineInputBorder(
+      //     borderSide: BorderSide(color: error, width: 2.w),
+      //     borderRadius: BorderRadius.all(Radius.circular(25.w)),
+      //   ),
+      //   focusedErrorBorder: OutlineInputBorder(
+      //     borderSide: BorderSide(color: error, width: 2.w),
+      //     borderRadius: BorderRadius.all(Radius.circular(100.w)),
+      //   ),
+      // ),
       tabBarTheme: TabBarTheme(
         labelColor: scheme.primary,
         unselectedLabelColor: scheme.background,

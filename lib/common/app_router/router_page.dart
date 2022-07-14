@@ -9,17 +9,20 @@ abstract class Routers{
 
    static final List<GetPage> getPages = [
 
-
-      GetPage(name: RouterName.Launch, page: ()=>LaunchPage()),
-      GetPage(name: RouterName.Main, page: ()=>MainPage()),
-      GetPage(name: RouterName.Home, page: ()=>HomePage()),
-      GetPage(name: RouterName.Login, page: ()=> LoginPage()),
-      GetPage(name: RouterName.Reigster, page: ()=>ReigsterPage()),
-      GetPage(name: RouterName.Banner, page: ()=>BannerPage()),
-      GetPage(name: RouterName.Favorite, page: ()=>FavoritePage()),
+      GetPage(name: RouterName.Launch, page: ()=>const LaunchPage()),
+      GetPage(name: RouterName.Main, page: ()=>const MainPage()),
+      GetPage(name: RouterName.Home, page: ()=>const HomePage()),
+      GetPage(
+        name: RouterName.Login, 
+        binding: LoginBinding(),
+        page: ()=> const LoginPage()
+        ),
+      GetPage(name: RouterName.Reigster, page: ()=>const ReigsterPage()),
+      GetPage(name: RouterName.Banner, page: ()=>const BannerPage()),
+      GetPage(name: RouterName.Favorite, page: ()=>const FavoritePage()),
       GetPage(name: RouterName.VideoDetail, page: ()=>VideoDetailPage()),
-      GetPage(name: RouterName.Ranking, page: ()=>RankingPage()),
-      GetPage(name: RouterName.Mine, page: ()=>MinePage())
+      GetPage(name: RouterName.Ranking, page: ()=>const RankingPage()),
+      GetPage(name: RouterName.Mine, page: ()=>const MinePage())
    ];
 
 }
