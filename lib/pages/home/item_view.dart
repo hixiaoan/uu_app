@@ -13,7 +13,10 @@ class _VideoItemState extends State<VideoItem> {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Get.toNamed(RouterName.VideoDetail, arguments: widget.model.vid);
+        Get.toNamed(RouterName.VideoDetail, arguments: widget.model.vid)
+            ?.then((value) {
+          SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
+        });
       },
       child: SizedBox(
         height: 220,
