@@ -1,6 +1,3 @@
-
-
-
 part of widgets;
 
 enum CustomImageType { asset, network, file }
@@ -128,11 +125,14 @@ class CustomImage extends StatelessWidget {
     switch (state.extendedImageLoadState) {
       case LoadState.loading:
         return Center(
-          child: CustomLoadingIndicator(
-            size: 30.w,
-            strokeWidth: 3.w,
-          ),
+          child: Image.asset('assets/images/logo.png'),
         );
+      // return Center(
+      //   child: CustomLoadingIndicator(
+      //     size: 30.w,
+      //     strokeWidth: 3.w,
+      //   ),
+      // );
       case LoadState.completed:
         Size? size;
         if (state.extendedImageInfo != null) {
