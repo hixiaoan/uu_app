@@ -17,7 +17,11 @@ abstract class Routers{
         binding: LoginBinding(),
         page: ()=> const LoginPage()
         ),
-      GetPage(name: RouterName.Reigster, page: ()=>const ReigsterPage()),
+      GetPage(
+        name: RouterName.Reigster, 
+        binding: RegisterBindings(),
+      page: ()=> ReigsterPage()),
+      
       GetPage(name: RouterName.Banner, page: ()=>const BannerPage()),
       GetPage(name: RouterName.Favorite, page: ()=>const FavoritePage()),
       GetPage(name: RouterName.VideoDetail, page: ()=>VideoDetailPage()),

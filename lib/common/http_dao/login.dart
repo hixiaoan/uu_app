@@ -1,18 +1,18 @@
 part of http_dao;
 
 class LoginDao {
-  static login(String userName, String password, BuildContext context) {
-    return _sendRequest(userName, password, context);
+  static login(String userName, String password) {
+    return _sendRequest(userName, password);
   }
 
-  static register(String userName, String password, String imoocId,
-      String orderId, BuildContext context,
+  static register(
+      String userName, String password, String imoocId, String orderId,
       {String courseFlag = "fa"}) {
-    return _sendRequest(userName, password, context,
+    return _sendRequest(userName, password,
         imoocId: imoocId, orderId: orderId, courseFlag: courseFlag);
   }
 
-  static _sendRequest(String userName, String password, BuildContext context,
+  static _sendRequest(String userName, String password,
       {imoocId, orderId, courseFlag}) async {
     BaseRequest request;
 
@@ -34,18 +34,18 @@ class LoginDao {
 
       ///设置登录临牌
       if (request is LoginRequest) {
-        if ( result['code'] == 200) {
+        if (result['code'] == 0) {
           StorageService.to
               .writeString(StorageKey.boardingPass, result["data"]);
-        }else {
-        CustomToast.fail(result['msg']);
-        return;
-      } 
-    }
+        } else {
+          CustomToast.fail(result['msg']);
+          return;
+        }
+      }
       print("登录令牌:${getBoardingPass()}");
-      FocusScope.of(context).unfocus();
       print("请求成功:$result");
-      Get.back();
+
+      Get.offNamedUntil(RouterName.Home, (route) => true);
     } on NetError catch (e) {
       print("${LoginDao().toString()} error :${e.message}");
     }
