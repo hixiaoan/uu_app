@@ -3,6 +3,7 @@ part of app_controller;
 class RegisterController extends LoginController {
   final _resetPassword = ''.obs;
   final _resetStated = false.obs;
+  @override
   get passwordState => _passwordState.value || _resetStated.value;
 
   void resetPasswordEvent(String value) {

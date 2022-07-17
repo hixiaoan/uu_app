@@ -1,5 +1,3 @@
-
-
 library app_model;
 
 import 'dart:convert';
@@ -10,3 +8,4 @@ part 'ranking.dart';
 part 'video_detail.dart';
 part 'mine.dart';
 part 'barrage.dart';
+part 'home_tap.dart';

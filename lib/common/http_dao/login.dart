@@ -37,6 +37,7 @@ class LoginDao {
         if (result['code'] == 0) {
           StorageService.to
               .writeString(StorageKey.boardingPass, result["data"]);
+          Get.back();
         } else {
           CustomToast.fail(result['msg']);
           return;
@@ -44,8 +45,6 @@ class LoginDao {
       }
       print("登录令牌:${getBoardingPass()}");
       print("请求成功:$result");
-
-      Get.offNamedUntil(RouterName.Home, (route) => true);
     } on NetError catch (e) {
       print("${LoginDao().toString()} error :${e.message}");
     }

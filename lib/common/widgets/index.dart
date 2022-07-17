@@ -1,5 +1,3 @@
-
-
 library widgets;
 
 import 'dart:async';
@@ -8,6 +6,7 @@ import 'dart:math';
 
 import 'package:chewie/chewie.dart';
 import 'package:extended_image/extended_image.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
@@ -16,6 +15,7 @@ import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 import 'package:orientation/orientation.dart';
+import 'package:pull_to_refresh_flutter3/pull_to_refresh_flutter3.dart';
 import 'package:underline_indicator/underline_indicator.dart';
 import 'package:uu_app/common/app_router/index.dart';
 import 'package:uu_app/common/controller/index.dart';
@@ -45,3 +45,5 @@ part 'barrage_view.dart';
 part 'barrage.dart';
 part 'video_view.dart';
 part 'video_ui.dart';
+part 'list_scroll_view.dart';
+part 'refresher_view.dart';

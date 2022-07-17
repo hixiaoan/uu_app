@@ -22,6 +22,30 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
     AppTheme.setSystemStyle();
   }
 
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    super.didChangeAppLifecycleState(state);
+
+    ///监听app的生命周期
+    switch (state) {
+      case AppLifecycleState.inactive: //正在使用
+        print("正在使用");
+        break;
+      case AppLifecycleState.resumed: //从后台进入前台
+        ///这是安卓的问题
+        // if (this is VideoDetailPage){
+        //   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
+        // }
+        print('进入前台');
+        break;
+      case AppLifecycleState.paused: //进入后台
+        print('进入后台');
+        break;
+      case AppLifecycleState.detached: //App被结束
+        print("app被结束了");
+        break;
+    }
+  }
+
   @override
   void dispose() {
     WidgetsBinding.instance.removeObserver(this);
@@ -57,8 +81,7 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
               controller.pageController.jumpToPage(page);
             },
             items: const [
-              
-               BottomNavigationBarItem(
+              BottomNavigationBarItem(
                 icon: Icon(Icons.home_outlined),
                 activeIcon: Icon(Icons.home),
                 label: '首页',
@@ -84,5 +107,4 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
       ),
     );
   }
-  
 }

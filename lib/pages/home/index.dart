@@ -1,4 +1,3 @@
-
 library home;
 
 import 'package:flutter/material.dart';
@@ -7,6 +6,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
 import 'package:uu_app/common/app_router/index.dart';
+import 'package:uu_app/common/controller/index.dart';
+import 'package:uu_app/pages/video_detail/index.dart';
 
 import '../../common/http_dao/index.dart';
 import '../../common/http_service/index.dart';

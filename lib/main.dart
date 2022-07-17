@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
@@ -29,79 +27,80 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-       designSize: const Size(428, 926),
-      builder:(context, child) =>  RefreshConfiguration(
-        headerBuilder:()=> const ClassicHeader(
-          refreshingIcon: CupertinoActivityIndicator(),
-        ),
-        footerBuilder: ()=>const ClassicFooter(
-          loadingIcon: CupertinoActivityIndicator(),
-        ),
-        hideFooterWhenNotFull: true,
-        child:GetMaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'Flutter UU',
-          theme: AppTheme.light(),
-          darkTheme: AppTheme.dark(),
-          themeMode: AppTheme.mode,
-          popGesture: true,
-          transitionDuration: const Duration(milliseconds: 450),
-          customTransition: RouteTransition(),
-          initialRoute: RouterName.Launch,
-          getPages: Routers.getPages,
-          navigatorObservers: [Routers.observer],
-          builder: EasyLoading.init(builder: (context, child) {
-            EasyLoading.instance
-              ..displayDuration = const Duration(milliseconds: 2000)
-              ..indicatorType = EasyLoadingIndicatorType.ring
-              ..loadingStyle = EasyLoadingStyle.custom
-              ..radius = 20.w
-              ..boxShadow = [
-                BoxShadow(
-                  color: Theme.of(context).colorScheme.shadow.withOpacity(0.15),
-                  offset: const Offset(0, 0),
-                  blurRadius: 20.w,
-                ),
-              ]
-              ..progressColor = Colors.transparent
-              ..contentPadding = EdgeInsets.all(20.w)
-              ..backgroundColor =
-                  Theme.of(context).brightness == Brightness.light
-                      ? Theme.of(context).colorScheme.surface
-                      : Theme.of(context).colorScheme.tertiary
-              ..indicatorColor = Colors.transparent
-              ..textColor = Theme.of(context).colorScheme.onSurface
-              ..textStyle = TextStyle(
-                fontWeight: FontWeight.w600,
-                fontSize: 17.w,
-                color: Theme.of(context).colorScheme.onSurface,
-              )
-              ..maskType = EasyLoadingMaskType.clear
-              ..maskColor = const Color(0xFF09101D).withOpacity(0.7)
-              ..userInteractions = true
-              ..successWidget = const CustomToastSuccess()
-              ..errorWidget = const CustomToastFail()
-              ..indicatorWidget = CustomLoadingIndicator(size: 60.w)
-              ..dismissOnTap = false;
-            return ScrollConfiguration(
-              behavior: NoShadowScrollBehavior(),
-              child: child ?? const Material(),
-            );
-          }),
-          // localizationsDelegates: const [
-          //   GlobalMaterialLocalizations.delegate,
-          //   GlobalWidgetsLocalizations.delegate,
-          //   GlobalCupertinoLocalizations.delegate,
-          // ],
-          supportedLocales: Translation.supported,
-          fallbackLocale: Translation.fallback,
-          locale: ConfigStore.to.locale,
-          translations: Translation(),
-        ),
-      )
-
-      )
-    ;
+        designSize: const Size(428, 926),
+        builder: (context, child) => RefreshConfiguration(
+              headerBuilder: () => const ClassicHeader(
+                refreshingIcon: CupertinoActivityIndicator(),
+              ),
+              footerBuilder: () => const ClassicFooter(
+                loadingIcon: CupertinoActivityIndicator(),
+              ),
+              hideFooterWhenNotFull: true,
+              child: GetMaterialApp(
+                debugShowCheckedModeBanner: false,
+                title: 'Flutter UU',
+                theme: AppTheme.light(),
+                darkTheme: AppTheme.dark(),
+                themeMode: AppTheme.mode,
+                popGesture: true,
+                transitionDuration: const Duration(milliseconds: 450),
+                customTransition: RouteTransition(),
+                initialRoute: RouterName.Launch,
+                getPages: Routers.getPages,
+                navigatorObservers: [Routers.observer],
+                builder: EasyLoading.init(builder: (context, child) {
+                  EasyLoading.instance
+                    ..displayDuration = const Duration(milliseconds: 2000)
+                    ..indicatorType = EasyLoadingIndicatorType.ring
+                    ..loadingStyle = EasyLoadingStyle.custom
+                    ..radius = 20.w
+                    ..boxShadow = [
+                      BoxShadow(
+                        color: Theme.of(context)
+                            .colorScheme
+                            .shadow
+                            .withOpacity(0.15),
+                        offset: const Offset(0, 0),
+                        blurRadius: 20.w,
+                      ),
+                    ]
+                    ..progressColor = Colors.transparent
+                    ..contentPadding = EdgeInsets.all(20.w)
+                    ..backgroundColor =
+                        Theme.of(context).brightness == Brightness.light
+                            ? Theme.of(context).colorScheme.surface
+                            : Theme.of(context).colorScheme.tertiary
+                    ..indicatorColor = Colors.transparent
+                    ..textColor = Theme.of(context).colorScheme.onSurface
+                    ..textStyle = TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 17.w,
+                      color: Theme.of(context).colorScheme.onSurface,
+                    )
+                    ..maskType = EasyLoadingMaskType.clear
+                    ..maskColor = const Color(0xFF09101D).withOpacity(0.7)
+                    ..userInteractions = true
+                    ..successWidget = const CustomToastSuccess()
+                    ..errorWidget = const CustomToastFail()
+                    ..indicatorWidget = CustomLoadingIndicator(size: 60.w)
+                    ..dismissOnTap = false;
+                  return ScrollConfiguration(
+                    behavior: NoShadowScrollBehavior(),
+                    child: child ?? const Material(),
+                  );
+                }),
+                localizationsDelegates: const [
+                  // RefreshLocalizations.delegate,
+                  // GlobalMaterialLocalizations.delegate,
+                  // GlobalWidgetsLocalizations.delegate,
+                  // GlobalCupertinoLocalizations.delegate,
+                ],
+                supportedLocales: Translation.supported,
+                fallbackLocale: Translation.fallback,
+                locale: ConfigStore.to.locale,
+                translations: Translation(),
+              ),
+            ));
   }
 }
 
@@ -139,11 +138,9 @@ class NoShadowScrollBehavior extends ScrollBehavior {
 }
 
 void testRegister() {
-
   // UULoginDao.register("faker_uzi", "18356087041", "10545853", "1587");
 }
 
 void testLogin() {
-
   // UULoginDao.login("faker_uzi", "18356087041");
 }
