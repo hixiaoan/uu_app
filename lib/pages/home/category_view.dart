@@ -28,33 +28,22 @@ class _CategoryViewState extends State<CategoryView>
                   onLoading: vc.onLoading,
                   child: vc.videoList == null
                       ? Container()
-                      : CustomScrollView(
-                          slivers: [
-                            if (vc.bannerList != null)
-                              _buildBanner(vc.bannerList!),
-                            SliverGrid(
-                                delegate:
-                                    SliverChildBuilderDelegate((ctx, index) {
-                                  return VideoItem(model: vc.videoList[index]);
-                                }, childCount: vc.videoList.length),
-                                gridDelegate:
-                                    const SliverGridDelegateWithFixedCrossAxisCount(
-                                        crossAxisCount: 2,
-                                        crossAxisSpacing: 8,
-                                        mainAxisSpacing: 8,
-                                        childAspectRatio: 0.9)),
-                          ],
-                        ));
+                      : GridView.builder(
+                      itemCount:vc.videoList.length,
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                                    crossAxisCount: 2,
+                                    crossAxisSpacing: 8,
+                                    mainAxisSpacing: 8,
+                                    childAspectRatio: 0.8),
+                    itemBuilder: (BuildContext context, int index) {
+                        return VideoItem(model: vc.videoList[index]);
+                    },
+
+
+              ));
             },
           )),
     );
-  }
-
-  Widget _buildBannerView(List<BannerList> list) {
-    return SliverList(
-        delegate: SliverChildBuilderDelegate((ctx, index) {
-      return BannerView(bannerList: list, height: 140);
-    }, childCount: 1));
   }
 
   _buildBanner(List<BannerList> list) {

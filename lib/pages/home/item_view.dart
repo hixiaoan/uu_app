@@ -65,7 +65,7 @@ class _VideoItemState extends State<VideoItem> {
                 _buildItems(Icons.live_tv, countFormat(widget.model.view)),
                 _buildItems(
                     Icons.favorite_border, countFormat(widget.model.favorite)),
-                _buildItems(null, durationTransform(widget.model.duration))
+                // _buildItems(null, durationTransform(widget.model.duration))
               ],
             ),
           ))
