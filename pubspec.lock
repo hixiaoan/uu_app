@@ -181,6 +181,11 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "2.0.1"
+  flutter_localizations:
+    dependency: "direct main"
+    description: flutter
+    source: sdk
+    version: "0.0.0"
   flutter_overlay:
     dependency: "direct main"
     description:
@@ -282,6 +287,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "4.0.1"
+  intl:
+    dependency: transitive
+    description:
+      name: intl
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.17.0"
   js:
     dependency: transitive
     description:
@@ -686,6 +698,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.2.0"
+  water_drop_nav_bar:
+    dependency: "direct main"
+    description:
+      name: water_drop_nav_bar
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "2.2.0+3"
   web_socket_channel:
     dependency: "direct main"
     description:

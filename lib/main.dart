@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/route_manager.dart';
 import 'package:pull_to_refresh_flutter3/pull_to_refresh_flutter3.dart';
 import 'package:uu_app/theme.dart';
@@ -91,9 +92,9 @@ class _MyAppState extends State<MyApp> {
                 }),
                 localizationsDelegates: const [
                   // RefreshLocalizations.delegate,
-                  // GlobalMaterialLocalizations.delegate,
-                  // GlobalWidgetsLocalizations.delegate,
-                  // GlobalCupertinoLocalizations.delegate,
+                  GlobalMaterialLocalizations.delegate,
+                  GlobalWidgetsLocalizations.delegate,
+                  GlobalCupertinoLocalizations.delegate,
                 ],
                 supportedLocales: Translation.supported,
                 fallbackLocale: Translation.fallback,
