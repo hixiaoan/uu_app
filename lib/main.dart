@@ -7,7 +7,7 @@ import 'package:get/route_manager.dart';
 import 'package:pull_to_refresh_flutter3/pull_to_refresh_flutter3.dart';
 import 'package:uu_app/theme.dart';
 import 'common/app_router/index.dart';
-import 'common/i18n/index.dart';
+import 'common/language/index.dart';
 import 'common/store/index.dart';
 import 'common/widgets/index.dart';
 import 'global.dart';
@@ -136,12 +136,4 @@ class NoShadowScrollBehavior extends ScrollBehavior {
         );
     }
   }
-}
-
-void testRegister() {
-  // UULoginDao.register("faker_uzi", "18356087041", "10545853", "1587");
-}
-
-void testLogin() {
-  // UULoginDao.login("faker_uzi", "18356087041");
 }
