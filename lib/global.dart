@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:orientation/orientation.dart';
 import 'package:uu_app/common/util/index.dart';
-import 'common/http_service/index.dart';
+import 'package:uu_net/index.dart';
 import 'common/services/index.dart';
 import 'common/store/index.dart';
 

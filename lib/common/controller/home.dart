@@ -20,7 +20,9 @@ class HomeController extends GetxController with StateMixin<HomeTabModel> {
       }
     } on NetError catch (e) {
       if (e is LoginError) {
-        Get.toNamed(RouterName.Login);
+        Get.toNamed(RouterName.Login)?.then((value){
+          requestTabList();
+        });
       } else {
         change(null, status: RxStatus.error(e.message));
       }

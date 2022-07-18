@@ -37,6 +37,7 @@ class LoginDao {
         if (result['code'] == 0) {
           StorageService.to
               .writeString(StorageKey.boardingPass, result["data"]);
+          HttpServices.instance.addHeaderParams(StorageKey.boardingPass, result["data"]);
           Get.back();
         } else {
           CustomToast.fail(result['msg']);

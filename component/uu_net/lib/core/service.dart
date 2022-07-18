@@ -3,9 +3,16 @@ part of http_services;
 class HttpServices {
   HttpServices._();
 
-  final Map<String, dynamic> _httpHeader = {};
+  Map<String, dynamic> _httpHeader = Map();
 
-  static HttpServices get instance => HttpServices._();
+  static HttpServices? _instance;
+
+  static HttpServices get instance => _getInstance();
+
+  static HttpServices _getInstance (){
+    _instance ??= HttpServices._();
+    return _instance!;
+  }
 
   HttpServices addHeaderParams(String k, Object v) {
     _httpHeader[k] = v;

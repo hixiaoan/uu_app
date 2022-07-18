@@ -13,8 +13,6 @@ class _CategoryViewState extends State<CategoryView>
     with AutomaticKeepAliveClientMixin {
   @override
   Widget build(BuildContext context) {
-    print('controller : ${Get.find<HomeContentVC>(tag: widget.vcTag)}');
-    super.build(context);
     return Container(
       padding: const EdgeInsets.only(left: 15, right: 15, top: 2),
       child: MediaQuery.removePadding(

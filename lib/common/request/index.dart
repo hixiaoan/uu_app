@@ -1,6 +1,6 @@
 library request;
 
-import '../http_service/index.dart';
+import 'package:uu_net/index.dart';
 
 part 'home.dart';
 part 'login.dart';
