@@ -3,9 +3,18 @@ part of http_services;
 class HttpServices {
   HttpServices._();
 
+  final Map<String, dynamic> _httpHeader = {};
+
   static HttpServices get instance => HttpServices._();
 
+  HttpServices addHeaderParams(String k, Object v) {
+    _httpHeader[k] = v;
+    return this;
+  }
+
   Future<dynamic> request(BaseRequest request) async {
+    assert(!_httpHeader.isEmpty, "请配置请求heder");
+    request.header = _httpHeader;
     HiResponse? response;
     Object? error;
     try {

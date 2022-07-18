@@ -22,6 +22,6 @@ $ flutter pub get
 $ cd ios
 $ pod install --repo-update
 
-$ vscode 用户设置中搜索“Flutter run additional args“ 添加 --no-sound-null-safety
+$ vscode 用户设置中搜索“Flutter run additional args“ 添加 
 $ Android Studio中：“编辑配置”→“--no-sound-null-safety”
 ```

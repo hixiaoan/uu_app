@@ -40,11 +40,11 @@ abstract class BaseRequest {
       uri = Uri.http(baseUrl(), pathStr, requestParams);
     }
 
-    if (needLogin()) {
-      
-      addHeaderParams("boarding-pass", StorageService.to.readString(StorageKey.boardingPass));
-      print(header);
-    }
+    // if (needLogin()) {
+
+    //   addHeaderParams("boarding-pass", StorageService.to.readString(StorageKey.boardingPass));
+    //   print(header);
+    // }
     print("请求url:${uri.toString()}");
     return uri.toString();
   }
@@ -58,8 +58,8 @@ abstract class BaseRequest {
 
   ///设置header参数
   Map<String, dynamic> header = {
-    'course-flag': 'fa',
-    'auth-token': 'ZmEtMjAyMS0wNC0xMiAyMToyMjoyMC1mYQ==fa',
+    // 'course-flag': 'fa',
+    // 'auth-token': 'ZmEtMjAyMS0wNC0xMiAyMToyMjoyMC1mYQ==fa',
   };
   BaseRequest addHeaderParams(String k, Object v) {
     header[k] = v;
