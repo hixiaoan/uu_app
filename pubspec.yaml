@@ -77,8 +77,8 @@ dependencies:
   flutter_easyloading: ^3.0.5
   water_drop_nav_bar: ^2.2.0+3
   flutter_nested: ^1.0.0
- 
 
+ 
 
 dev_dependencies:
   flutter_test:
